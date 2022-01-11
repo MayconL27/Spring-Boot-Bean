@@ -13,7 +13,16 @@ public class App {
         
         
         Livro livro = factory.getBean(Livro.class);
+        livro.setNome("Java");
+        livro.setCodigo("1234");
+
+        Autor autor = factory.getBean(Autor.class);
+        autor.setNome("Deitel");
+
         livro.exibir();
+
+        ((AbstractApplicationContext) factory).close();
+
 		
 
     }

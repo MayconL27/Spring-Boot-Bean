@@ -14,6 +14,11 @@ public class AppConfig {
         return new Livro();
     }
     //  <bean id="livro" class="com.springbeans.Livro"/>
+
+    @Bean
+    public AutorLivro getAutorLivro() {
+        return new Autor();
+    }
     
     
 }
